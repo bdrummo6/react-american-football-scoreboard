@@ -16,6 +16,8 @@ function App() {
 
   const [toGo, setToGo] = useState(10);
   const [ballOn, setBallOn] = useState(20);
+  
+  document.title = 'React Football Scoreboard';
 
   return (
     <div className="container">
