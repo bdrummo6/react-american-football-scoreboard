@@ -12,8 +12,10 @@ function App() {
   const [quarter, setQuarter] = useState(1);
   const [down, setDown] = useState(1);
   
-  const [minutes, setMinutes] = useState(15);
-  const [seconds, setSeconds] = useState(00);
+  const [clock] = useState('15:00');
+
+  const [toGo, setToGo] = useState(10);
+  const [ballOn, setBallOn] = useState(20);
 
   return (
     <div className="container">
@@ -25,7 +27,7 @@ function App() {
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
             <div className="away__score">{awayScore}</div>
           </div>
-          <div className="timer">{minutes}:{seconds}</div>
+          <div className="timer">{clock}</div>
           <div className="home">
             <h2 className="home__name">Tigers</h2>
             <div className="home__score">{homeScore}</div>
@@ -37,6 +39,10 @@ function App() {
            setDown={setDown}
            quarter={quarter}
            setQuarter={setQuarter}
+           toGo={toGo}
+           setToGo={setToGo}
+           ballOn={ballOn}
+           setBallOn={setBallOn}
         />
       </section>
 
