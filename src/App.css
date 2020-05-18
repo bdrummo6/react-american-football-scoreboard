@@ -3,6 +3,11 @@
   --red: #ff2d2b;
 }
 
+h1 {
+  text-align: center;
+  margin-top: 25px;
+}
+
 .scoreboard {
   width: 58%;
   margin: 30px auto;
