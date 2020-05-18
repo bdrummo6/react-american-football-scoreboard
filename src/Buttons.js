@@ -28,6 +28,15 @@ const Buttons = (props) => {
 
             <div className='quarterButtons' style={btnContainerStyles}>
                <button onClick={() => {
+                  if(props.quarter < 4) {
+                  props.setQuarter(props.quarter + 1);
+                  } else {
+                  props.setQuarter(4);
+                  }}} className='quarterButtons__increase' style={btnStyles}>
+                  Quarter +
+               </button>
+
+               <button onClick={() => {
                   if (props.quarter > 1) {
                      props.setQuarter(props.quarter - 1);
                   } else {
@@ -36,18 +45,18 @@ const Buttons = (props) => {
                   }} className='quarterButtons__decrease' style={btnStyles}>
                   Quarter -
                </button>
-
-               <button onClick={() => {
-                  if(props.quarter < 4) {
-                  props.setQuarter(props.quarter + 1);
-                  } else {
-                  props.setQuarter(4);
-                  }}} className='quarterButtons__increase' style={btnStyles}>
-                  Quarter +
-               </button>
             </div>
 
             <div className='downButtons' style={btnContainerStyles}>
+               <button onClick={() => {
+                  if(props.down < 4) {
+                     props.setDown(props.down + 1);
+                  } else {
+                     props.setDown(4);
+                  }}} className='downButtons__increase' style={btnStyles}>
+                  Down +
+               </button>
+
                <button onClick={() => {
                   if (props.down > 1) {
                      props.setDown(props.down - 1);
@@ -56,15 +65,6 @@ const Buttons = (props) => {
                   }
                }} className='downButtons__decrease' style={btnStyles}>
                   Down -
-               </button>
-
-               <button onClick={() => {
-                  if(props.down < 4) {
-                     props.setDown(props.down + 1);
-                  } else {
-                     props.setDown(4);
-                  }}} className='downButtons__increase' style={btnStyles}>
-                  Down +
                </button>
             </div>
 
