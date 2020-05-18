@@ -21,6 +21,7 @@ function App() {
 
   return (
     <div className="container">
+      <h1>React Football Scoreboard</h1>
       <section className="scoreboard">
         <div className="topRow">
           <div className="away">
